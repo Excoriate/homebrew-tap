@@ -5,21 +5,21 @@
 class Glonner < Formula
   desc "A CLI tool for devour repositories within a given GitHub organization."
   homepage "https://github.com/Excoriate/glonner-cli"
-  version "0.2.15"
+  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Excoriate/glonner-cli/releases/download/0.2.15/glonner_0.2.15_darwin_arm64.tar.gz"
-      sha256 "b7cfa4e8e92c5ac30ca004d7814b5e971f67b771de3153569b2106f3471175ea"
+    if Hardware::CPU.intel?
+      url "https://github.com/Excoriate/glonner-cli/releases/download/0.6.0/glonner_0.6.0_darwin_amd64.tar.gz"
+      sha256 "fe87c88bd3fd2e4396d93225efd01eb673aaa95cac2309287813df3ded2e8d2f"
 
       def install
         bin.install "glonner"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Excoriate/glonner-cli/releases/download/0.2.15/glonner_0.2.15_darwin_amd64.tar.gz"
-      sha256 "9ebc077e500d958ab5defbe3dd4ac6abcf0918af70710d6c3dcef40d1edaf433"
+    if Hardware::CPU.arm?
+      url "https://github.com/Excoriate/glonner-cli/releases/download/0.6.0/glonner_0.6.0_darwin_arm64.tar.gz"
+      sha256 "b689bfa70a18d61589369aa881e95464e10b32de9150f5d5ae5bdce0b15b775f"
 
       def install
         bin.install "glonner"
@@ -29,24 +29,24 @@ class Glonner < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Excoriate/glonner-cli/releases/download/0.2.15/glonner_0.2.15_linux_armv6.tar.gz"
-      sha256 "48d4a7bb61d5e3bf0813c3ba2635403433ba0ddb3c47ffcdf1b062615767110a"
-
-      def install
-        bin.install "glonner"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Excoriate/glonner-cli/releases/download/0.2.15/glonner_0.2.15_linux_arm64.tar.gz"
-      sha256 "14fafec0069d3a0cf55258fb4f11daa64d2010543ed3d5b17853be92762ea1b7"
+      url "https://github.com/Excoriate/glonner-cli/releases/download/0.6.0/glonner_0.6.0_linux_armv6.tar.gz"
+      sha256 "e10a16bd0ccb51bf4725b0924f1ff8480f11e3b2d09363d57ea56d06498c1b3f"
 
       def install
         bin.install "glonner"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Excoriate/glonner-cli/releases/download/0.2.15/glonner_0.2.15_linux_amd64.tar.gz"
-      sha256 "b2e09e096cb8a94ffa6cdc82b6922f4ceb0fca02231b8744e0ce8d59a3c7eead"
+      url "https://github.com/Excoriate/glonner-cli/releases/download/0.6.0/glonner_0.6.0_linux_amd64.tar.gz"
+      sha256 "435aa720f7c4e6b8971b93491fa9677a171299ef18d9510cf9961331d5a556d3"
+
+      def install
+        bin.install "glonner"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Excoriate/glonner-cli/releases/download/0.6.0/glonner_0.6.0_linux_arm64.tar.gz"
+      sha256 "c78a0bff08c65b2ba285ca09a064abcbab5d6a944dccada10d1fd5379348d28f"
 
       def install
         bin.install "glonner"
