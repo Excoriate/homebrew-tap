@@ -5,21 +5,21 @@
 class DaggerPythonEcs < Formula
   desc "A CLI tool, framework, portable pipeline... anything you want it to be, for automating stuffs."
   homepage "https://github.com/Excoriate/dagger-python-ecs"
-  version "0.4.0"
+  version "0.4.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Excoriate/dagger-python-ecs/releases/download/v0.4.0/dagger-python-ecs_0.4.0_darwin_arm64.tar.gz"
-      sha256 "a11e1e0d5d5c6b534bda445304ee6a24a8f32a084bce4e19982dda0f83d81578"
+      url "https://github.com/Excoriate/dagger-python-ecs/releases/download/v0.4.1/dagger-python-ecs_0.4.1_darwin_arm64.tar.gz"
+      sha256 "5e3e7ea170591cf27707a04f92c90d21e882daa9a83a07e4f8ec2ed386e8bcac"
 
       def install
         bin.install "dagger-python-ecs"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Excoriate/dagger-python-ecs/releases/download/v0.4.0/dagger-python-ecs_0.4.0_darwin_amd64.tar.gz"
-      sha256 "4dcdefaff00a7318fdc2a9a1f5c5aea3d5f986e1a413c1c3860372f83645ab60"
+      url "https://github.com/Excoriate/dagger-python-ecs/releases/download/v0.4.1/dagger-python-ecs_0.4.1_darwin_amd64.tar.gz"
+      sha256 "e40f3f769c3e872b65d367c99cbd7d8cfc7ac7ad587c573364fe67d32f4d16bb"
 
       def install
         bin.install "dagger-python-ecs"
@@ -29,24 +29,24 @@ class DaggerPythonEcs < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Excoriate/dagger-python-ecs/releases/download/v0.4.0/dagger-python-ecs_0.4.0_linux_armv6.tar.gz"
-      sha256 "3340bab85cede30e0d9ada66c6532fbfefa46af099e62404dfaff62a440a5e77"
+      url "https://github.com/Excoriate/dagger-python-ecs/releases/download/v0.4.1/dagger-python-ecs_0.4.1_linux_armv6.tar.gz"
+      sha256 "f9369857928faf90a403a5ab55fc884c83fa9321b4604d5979de40fce2829341"
 
       def install
         bin.install "dagger-python-ecs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Excoriate/dagger-python-ecs/releases/download/v0.4.0/dagger-python-ecs_0.4.0_linux_arm64.tar.gz"
-      sha256 "c20d5fbb39da237a75b11e029544fd46a682a26072460bb479601d385ed31135"
+      url "https://github.com/Excoriate/dagger-python-ecs/releases/download/v0.4.1/dagger-python-ecs_0.4.1_linux_arm64.tar.gz"
+      sha256 "2e975475074faded57a95163c2570d2ddfba7c07f2b4ebb8de3f2cb540ab7bdc"
 
       def install
         bin.install "dagger-python-ecs"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Excoriate/dagger-python-ecs/releases/download/v0.4.0/dagger-python-ecs_0.4.0_linux_amd64.tar.gz"
-      sha256 "25fb78e4dfd561e37595286d0aaad3930dfdc29e503fad5d92e31b7532025dc1"
+      url "https://github.com/Excoriate/dagger-python-ecs/releases/download/v0.4.1/dagger-python-ecs_0.4.1_linux_amd64.tar.gz"
+      sha256 "46c1d4497dff3afa408e9c42ca5aa8394b16a3ee2fe603f16dceefc2f35b7c37"
 
       def install
         bin.install "dagger-python-ecs"
