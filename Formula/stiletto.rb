@@ -5,21 +5,21 @@
 class Stiletto < Formula
   desc "A CLI tool, framework, portable pipeline... anything you want it to be, for automating stuffs."
   homepage "https://github.com/Excoriate/stiletto"
-  version "0.2.3"
+  version "0.2.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Excoriate/stiletto/releases/download/v0.2.3/stiletto_0.2.3_darwin_amd64.tar.gz"
-      sha256 "d6e1a322a8a9d2f07e62f3eb824ee61c13becb15ee2d876983c64809bb2b87e7"
+      url "https://github.com/Excoriate/stiletto/releases/download/v0.2.4/stiletto_0.2.4_darwin_amd64.tar.gz"
+      sha256 "c546fc1fab82e8fe157f81309de1526d91e6ad257a985730129d1908fba5b12b"
 
       def install
         bin.install "stiletto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Excoriate/stiletto/releases/download/v0.2.3/stiletto_0.2.3_darwin_arm64.tar.gz"
-      sha256 "81cf25be5e3b1400b5f9c4a9644c55b6118414ea52f40fceef307b56b4c3b08a"
+      url "https://github.com/Excoriate/stiletto/releases/download/v0.2.4/stiletto_0.2.4_darwin_arm64.tar.gz"
+      sha256 "491ef80fca26a626749ac7608aee0c56c03eed579cd375a4de51edbe1d7e6edc"
 
       def install
         bin.install "stiletto"
@@ -28,25 +28,25 @@ class Stiletto < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Excoriate/stiletto/releases/download/v0.2.3/stiletto_0.2.3_linux_armv6.tar.gz"
-      sha256 "cc067b901097db953d58bc3ee4eb5c3cc6e687e169eaa60d9b1b3ed081bf41d7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Excoriate/stiletto/releases/download/v0.2.4/stiletto_0.2.4_linux_arm64.tar.gz"
+      sha256 "382b68f1723ec78ad0f06feea6d8d92b3169366d0cac660285149639853aa059"
 
       def install
         bin.install "stiletto"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Excoriate/stiletto/releases/download/v0.2.3/stiletto_0.2.3_linux_amd64.tar.gz"
-      sha256 "e6b4b922a2269894965b3d7826ad73b71cde071d41164fab9f45abf6fd3aa89d"
+      url "https://github.com/Excoriate/stiletto/releases/download/v0.2.4/stiletto_0.2.4_linux_amd64.tar.gz"
+      sha256 "b3351a1d1d95ef2bd561fbae78f3c475881f2d183240e09fbcbee672e89a7963"
 
       def install
         bin.install "stiletto"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Excoriate/stiletto/releases/download/v0.2.3/stiletto_0.2.3_linux_arm64.tar.gz"
-      sha256 "42bbf8fa86df8e92f85544ce521b16fa7ed5b6c104d2b0b0c647971d9f7976de"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/Excoriate/stiletto/releases/download/v0.2.4/stiletto_0.2.4_linux_armv6.tar.gz"
+      sha256 "a5aa74cc8dec57e115f241ac5bf0c9e652485366ea35b0ea0522303df1090c63"
 
       def install
         bin.install "stiletto"
