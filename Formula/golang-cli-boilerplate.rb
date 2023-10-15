@@ -5,21 +5,21 @@
 class GolangCliBoilerplate < Formula
   desc "ECS Deployer is a CLI tool for deploying ECS services and tasks, plus other nice stuffs."
   homepage "https://github.com/Excoriate/golang-cli-boilerplate"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Excoriate/golang-cli-boilerplate/releases/download/v1.1.0/golang-cli-boilerplate_1.1.0_darwin_amd64.tar.gz"
-      sha256 "2c9a9d3a08f1c68b3b8d6a89e9d115c09c66f9ac3a5772132d34b4f8386d992e"
+      url "https://github.com/Excoriate/golang-cli-boilerplate/releases/download/v1.2.0/golang-cli-boilerplate_1.2.0_darwin_amd64.tar.gz"
+      sha256 "a7ebfc39470efd769481ab1422e26d5d048d3717fa41494a018618de787bab3a"
 
       def install
         bin.install "golang-cli-boilerplate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Excoriate/golang-cli-boilerplate/releases/download/v1.1.0/golang-cli-boilerplate_1.1.0_darwin_arm64.tar.gz"
-      sha256 "566e1ec2c1a96c04cdbc587027b3cb0d7405f4689d49d0b84342f5d770e6d05f"
+      url "https://github.com/Excoriate/golang-cli-boilerplate/releases/download/v1.2.0/golang-cli-boilerplate_1.2.0_darwin_arm64.tar.gz"
+      sha256 "08d1ac92a79111fa87202add57d753f1fed492ab612f482c2bb328ea470902c6"
 
       def install
         bin.install "golang-cli-boilerplate"
@@ -28,25 +28,25 @@ class GolangCliBoilerplate < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Excoriate/golang-cli-boilerplate/releases/download/v1.1.0/golang-cli-boilerplate_1.1.0_linux_arm64.tar.gz"
-      sha256 "3fddee749abb28bc16c69a5e9636237ef653d0e50b1284489b44532f66fc37e3"
-
-      def install
-        bin.install "golang-cli-boilerplate"
-      end
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Excoriate/golang-cli-boilerplate/releases/download/v1.1.0/golang-cli-boilerplate_1.1.0_linux_armv6.tar.gz"
-      sha256 "fa486e46a0f813a7f0335f6a64dae04810bd38d26bc0bcd66ceb0a704e3bb133"
+      url "https://github.com/Excoriate/golang-cli-boilerplate/releases/download/v1.2.0/golang-cli-boilerplate_1.2.0_linux_armv6.tar.gz"
+      sha256 "eb6bc1406e1d3c86de87eca1136ba7ce5c3c3f59759c0f286fa234c418042051"
 
       def install
         bin.install "golang-cli-boilerplate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Excoriate/golang-cli-boilerplate/releases/download/v1.1.0/golang-cli-boilerplate_1.1.0_linux_amd64.tar.gz"
-      sha256 "64c7dc11306b9494bc941e9867639338700db7528b4677ca2344e5e2ff3d9b27"
+      url "https://github.com/Excoriate/golang-cli-boilerplate/releases/download/v1.2.0/golang-cli-boilerplate_1.2.0_linux_amd64.tar.gz"
+      sha256 "a9386a9fe85610b1243493cffca518617f9f05c30584af53f984dcc6a8eef1fa"
+
+      def install
+        bin.install "golang-cli-boilerplate"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Excoriate/golang-cli-boilerplate/releases/download/v1.2.0/golang-cli-boilerplate_1.2.0_linux_arm64.tar.gz"
+      sha256 "5c1a4e0dc5623feea1074da49c96ef3b54b0d283ea810a69a1ff6a186cbdb6f1"
 
       def install
         bin.install "golang-cli-boilerplate"
