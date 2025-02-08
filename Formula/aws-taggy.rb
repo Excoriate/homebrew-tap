@@ -5,21 +5,21 @@
 class AwsTaggy < Formula
   desc "AWS Taggy is a CLI tool that ensures tag compliance for AWS resources, enhancing efficiency and supporting your FinOps goals."
   homepage "https://github.com/Excoriate/aws-taggy"
-  version "1.4.0"
+  version "1.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Excoriate/aws-taggy/releases/download/v1.4.0/aws-taggy_1.4.0_darwin_amd64.tar.gz"
-      sha256 "38941f8a217ede3a4734c85a6cbe44ad0c76dceffd0d181e9b6c33d389e5b8e5"
+      url "https://github.com/Excoriate/aws-taggy/releases/download/v1.5.0/aws-taggy_1.5.0_darwin_amd64.tar.gz"
+      sha256 "0223f6dd4905d4886413ee0247287e90f3db5cf6e8de551c7ad362b47a7755a7"
 
       def install
         bin.install "aws-taggy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Excoriate/aws-taggy/releases/download/v1.4.0/aws-taggy_1.4.0_darwin_arm64.tar.gz"
-      sha256 "b494d02465d9649debe41386aa5aa9f955f10f28c284921dff8248c028150530"
+      url "https://github.com/Excoriate/aws-taggy/releases/download/v1.5.0/aws-taggy_1.5.0_darwin_arm64.tar.gz"
+      sha256 "724728cb0119f1b29a3330a198663033be61c84fccc83a341aec0bbfea99c1d8"
 
       def install
         bin.install "aws-taggy"
@@ -30,8 +30,8 @@ class AwsTaggy < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Excoriate/aws-taggy/releases/download/v1.4.0/aws-taggy_1.4.0_linux_amd64.tar.gz"
-        sha256 "1c83ad4a28597f48e838302761a3cb9aec581a4293e2de47b49327ea7f5836fe"
+        url "https://github.com/Excoriate/aws-taggy/releases/download/v1.5.0/aws-taggy_1.5.0_linux_amd64.tar.gz"
+        sha256 "6303240a106a96e570436c8bf956dc60ce87f42e0c227fb34459c4569a140307"
 
         def install
           bin.install "aws-taggy"
@@ -40,8 +40,8 @@ class AwsTaggy < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/Excoriate/aws-taggy/releases/download/v1.4.0/aws-taggy_1.4.0_linux_arm.tar.gz"
-        sha256 "aee20eee5d33e73280d50e0b1f87997434d3536eb6f5ee073248d84731dd75b0"
+        url "https://github.com/Excoriate/aws-taggy/releases/download/v1.5.0/aws-taggy_1.5.0_linux_arm.tar.gz"
+        sha256 "191d97d208b06c5af138b0cef4b05e8f90a0414b5115c95fe7ce9aa17f489ac3"
 
         def install
           bin.install "aws-taggy"
@@ -50,8 +50,8 @@ class AwsTaggy < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Excoriate/aws-taggy/releases/download/v1.4.0/aws-taggy_1.4.0_linux_arm64.tar.gz"
-        sha256 "854d6a4ce4d768d8d4e1f0db36edff03430dffe6b2243fed23382ad74f2a92a3"
+        url "https://github.com/Excoriate/aws-taggy/releases/download/v1.5.0/aws-taggy_1.5.0_linux_arm64.tar.gz"
+        sha256 "008ecb9f2d885aae960c11cdf99fff112301e0dacc312a323cb76706bda90343"
 
         def install
           bin.install "aws-taggy"
